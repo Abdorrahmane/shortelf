@@ -12,4 +12,4 @@ class Account(models.Model):
     username = models.CharField(max_length=100, unique=True)
     password = models.CharField(max_length=200)
     account_type = models.IntegerField(choices=AccountType.choices)   
-    #user = models.ForeignKey(User, on_delete=DO_NOTHING)
+    user = models.ForeignKey(User, on_delete=DO_NOTHING)
